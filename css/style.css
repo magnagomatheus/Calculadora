@@ -9,7 +9,7 @@ body {
 
 #container {
     margin: auto;
-    width: 300px;
+    width: 600px;
 }
 
 #container #header {
@@ -46,6 +46,12 @@ body {
 
 #container #section #teclas table {
     padding: 10px;
+    width: 100%;
+}
+
+#container #section #teclas table tr {
+    display: flex;
+    
 }
 
 #container #section #teclas button {
@@ -53,4 +59,14 @@ body {
     width: 110px;
     font-weight: bold;
     font-size: 20px;
+}
+
+#container #section #teclas table tr td button.special {
+    background-color: rgb(107, 43, 226);
+    color: rgb(252, 227, 3);
+}
+
+#container #section #teclas table tr td button.lasts {
+    width: 240px;
+    justify-content: center;
 }
