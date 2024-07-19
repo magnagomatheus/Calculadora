@@ -3,25 +3,60 @@
     padding: 0;
 }
 
+:root {
+    --bg-color: #222831;
+    --bg-tela: hsl(30, 25%, 89%);
+    --bg-keys: hsla(30, 25%, 89%, 0.911);
+    --bg-special-keys: rgb(107, 43, 226);
+    --bg-special-keys-hover: rgb(132, 73, 241);
+    --bg-color-finish: rgb(208, 63, 47);
+    --bg-color-finish-hover: rgb(228, 28, 6);
+    --bg-keys-hover: white;
+    --color-special-keys: #F4CE14;
+    --color-special-keys-hover: #F4CE14;
+    --color-keys: black;
+    --color-keys-hover: rgb(119, 60, 228);
+    --box-shadow-color: hsl(28, 16%, 65%);
+    --box-shadow-color-hover: rgb(149, 101, 238);
+    --box-shadow-special-color: rgba(0, 0, 0, 0.726);
+    --box-shadow-color-special-hover: rgba(135, 90, 226, 0.685);
+    --box-shadow-color-finish-hover: rgb(128, 75, 75);
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--bg-color);
+    font-weight: 900;
+    margin: auto;
+    width: 700px;
+    margin-top: 80px;
 }
 
 #container {
     margin: auto;
-    width: 600px;
+    width: 550px;
+}
+
+#calculadora {
+    align-items: center;
+    justify-content: center;
+    width: 550px;
+    padding: 15px;
+    background: #17153b93;
+    border-radius: 50px;
 }
 
 #container #header {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 
-#container #header h3 {
-    color: rgb(255, 174, 0);
+#container #header i {
+    color: white;
     font-weight: bold;
-    font-size: 60px;
+    font-size: 40px;
+    margin: 5px 15px;
 }
 
 #container #section {
@@ -32,41 +67,71 @@ body {
 }
 
 #container #section #tela #result {
-    height: 60px;
-    width: 500px;
-    margin-top: 20px;
+    background-color: var(--bg-tela);
+    height: 75px;
+    width: 530px;
     font-weight: bold;
     font-size: 20px;
     text-align: center;
-}
-
-#container #section #teclas {
-    margin-top: 20px;
+    border-radius: 30px;
+    border: none;
 }
 
 #container #section #teclas table {
     padding: 10px;
     width: 100%;
+    margin: auto;
 }
 
 #container #section #teclas table tr {
     display: flex;
-    
 }
 
 #container #section #teclas button {
+    background-color: var(--bg-keys);
+    color: var(--color-keys);
     height: 80px;
-    width: 110px;
+    width: 100px;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 22px;
+    border-radius: 15px;
+    border: none;
+    box-shadow: 2px 5px 3px var(--box-shadow-color);
+}
+
+#container #section #teclas button:hover {
+    background-color: var(--bg-keys-hover);
+    color: var(--color-keys-hover);
+    box-shadow: 2px 5px 3px var(--box-shadow-color-hover);
 }
 
 #container #section #teclas table tr td button.special {
-    background-color: rgb(107, 43, 226);
-    color: rgb(252, 227, 3);
+    background-color: var(--bg-special-keys);
+    color: var(--color-special-keys);
+    box-shadow: 0 5px 4px var(--box-shadow-special-color);
+    font-weight: bold;
+}
+
+#container #section #teclas table tr td button.special:hover {
+    background-color: var(--bg-special-keys-hover);
+    color: var(--color-special-keys);
+    box-shadow: 0 5px 4px var(--box-shadow-color-special-hover);
+    font-weight: bold;
 }
 
 #container #section #teclas table tr td button.lasts {
-    width: 240px;
+    width: 220px;
     justify-content: center;
+}
+
+#container #section #teclas table tr td button.finish {
+    background-color: var(--bg-color-finish);
+    color: var(--color-special-keys-hover);
+}
+
+#container #section #teclas table tr td button.finish:hover {
+    background-color: var(--bg-color-finish-hover);
+
+    color: var(--color-special-keys-hover);
+    box-shadow: 0 5px 4px var(--box-shadow-color-finish-hover);
 }
