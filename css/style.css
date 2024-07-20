@@ -8,19 +8,22 @@
     --bg-tela: hsl(30, 25%, 89%);
     --bg-keys: hsla(30, 25%, 89%, 0.911);
     --bg-special-keys: rgb(107, 43, 226);
-    --bg-special-keys-hover: rgb(132, 73, 241);
+    --bg-special-keys-hover: rgb(132, 66, 253);
+    --bg-special-keys-active: rgba(132, 73, 241, 0.486);
     --bg-color-finish: rgb(208, 63, 47);
-    --bg-color-finish-hover: rgb(228, 28, 6);
+    --bg-color-finish-hover: rgb(255, 25, 0);
+    --bg-color-finish-active: rgba(228, 28, 6, 0.514);
     --bg-keys-hover: white;
+    --bg-keys-active: rgba(243, 243, 243, 0.589);
     --color-special-keys: #F4CE14;
     --color-special-keys-hover: #F4CE14;
     --color-keys: black;
     --color-keys-hover: rgb(119, 60, 228);
     --box-shadow-color: hsl(28, 16%, 65%);
-    --box-shadow-color-hover: rgb(149, 101, 238);
+    --box-shadow-color-hover: rgba(149, 101, 238, 0.651);
     --box-shadow-special-color: rgba(0, 0, 0, 0.726);
-    --box-shadow-color-special-hover: rgba(135, 90, 226, 0.685);
-    --box-shadow-color-finish-hover: rgb(128, 75, 75);
+    --box-shadow-color-special-hover: rgba(135, 90, 226, 0.308);
+    --box-shadow-color-finish-hover: rgba(255, 7, 7, 0.432);
 }
 
 body {
@@ -105,6 +108,12 @@ body {
     box-shadow: 2px 5px 3px var(--box-shadow-color-hover);
 }
 
+#container #section #teclas button:active {
+    background-color: var(--bg-keys-active);
+    color: var(--color-keys);
+    box-shadow: none;
+}
+
 #container #section #teclas table tr td button.special {
     background-color: var(--bg-special-keys);
     color: var(--color-special-keys);
@@ -119,6 +128,12 @@ body {
     font-weight: bold;
 }
 
+#container #section #teclas table tr td button.special:active {
+    background-color: var(--bg-special-keys-active);
+    color: var(--color-special-keys);
+    box-shadow: none;
+}
+
 #container #section #teclas table tr td button.lasts {
     width: 220px;
     justify-content: center;
@@ -131,7 +146,11 @@ body {
 
 #container #section #teclas table tr td button.finish:hover {
     background-color: var(--bg-color-finish-hover);
-
     color: var(--color-special-keys-hover);
     box-shadow: 0 5px 4px var(--box-shadow-color-finish-hover);
+}
+
+#container #section #teclas table tr td button.finish:active {
+    background-color: var(--bg-color-finish-active);
+    box-shadow: none;
 }
