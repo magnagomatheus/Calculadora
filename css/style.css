@@ -1,5 +1,5 @@
 * {
-    margin: 5px;
+    margin: 0;
     padding: 0;
 }
 
@@ -78,16 +78,13 @@ body {
     text-align: center;
     border-radius: 30px;
     border: none;
-}
-
-#container #section #teclas table {
-    padding: 10px;
-    width: 100%;
-    margin: auto;
+    margin: 10px;
 }
 
 #container #section #teclas table tr {
     display: flex;
+    gap: 10px;
+    margin: 25px;
 }
 
 #container #section #teclas button {
@@ -135,7 +132,7 @@ body {
 }
 
 #container #section #teclas table tr td button.lasts {
-    width: 220px;
+    width: 212px;
     justify-content: center;
 }
 
@@ -153,4 +150,64 @@ body {
 #container #section #teclas table tr td button.finish:active {
     background-color: var(--bg-color-finish-active);
     box-shadow: none;
+}
+
+
+@media (width < 700px) {
+
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: var(--bg-color);
+        font-weight: 900;
+        margin: auto;
+        width: 500px;
+        margin-top: 80px;
+    }
+    
+    #container {
+        display: flex;
+        width: 100%;
+    }
+    
+    #calculadora {
+        background: #17153b93;
+        border-radius: 50px;
+    }
+
+    #container #section #tela #result {
+        background-color: var(--bg-tela);
+        height: 70px;
+        width: 380px;
+        font-weight: bold;
+        font-size: 20px;
+        text-align: center;
+        border-radius: 30px;
+        border: none;
+    }
+
+    #container #section #teclas table {
+        width: 200px;
+    }
+
+    #container #section #teclas button {
+        background-color: var(--bg-keys);
+        color: var(--color-keys);
+        height: 60px;
+        width: 80px;
+        font-weight: bold;
+        font-size: 20px;
+        border-radius: 15px;
+        border: none;
+        box-shadow: 2px 5px 3px var(--box-shadow-color);
+    }
+
+    #container #section #teclas table tr td button.lasts {
+        width: 170px;
+        justify-content: center;
+    }
+
 }
